@@ -1,0 +1,42 @@
+{
+  "name": "rol4nd909",
+  "version": "0.1.0",
+  "description": "First Git, Grunt, sass, svg project",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ROL4ND909/rol4nd909.github.io.git"
+  },
+  "keywords": [
+    "git",
+    "svg",
+    "grunt",
+    "sass"
+  ],
+  "author": "ROL4ND909",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ROL4ND909/rol4nd909.github.io/issues"
+  },
+  "homepage": "https://github.com/ROL4ND909/rol4nd909.github.io",
+  "devDependencies": {
+    "glob"                   : "^4.0.5",
+    "grunt"                  : "^0.4.5",
+    "grunt-autoprefixer"     : "^1.0.0",
+    "grunt-contrib-concat"   : "^0.5.0",
+    "grunt-contrib-htmlmin"  : "^0.3.0",
+    "grunt-contrib-imagemin" : "^0.8.0",
+    "grunt-contrib-sass"     : "^0.7.4",
+    "grunt-contrib-uglify"   : "^0.5.1",
+    "grunt-contrib-watch"    : "^0.6.1",
+    "grunt-jekyll"           : "^0.4.2",
+    "grunt-shell"            : "^0.7.0",
+    "grunt-svgstore"         : "^0.3.2"
+  },
+  "dependencies": {
+    "load-grunt-tasks": "^0.6.0"
+  }
+}

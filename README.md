@@ -1,2 +1,3 @@
-rol4nd909.github.io
+My first git project
 ===================
+Using git, grunt, npm, sass, svg
