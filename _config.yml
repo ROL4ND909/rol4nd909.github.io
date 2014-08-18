@@ -22,6 +22,8 @@ exclude: [
   readme.md
 ]
 
+permalink: /blog/:title/
+
 twitter_username: rolandfranke
 github_username:  rol4nd909
 
