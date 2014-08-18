@@ -16,7 +16,7 @@ layout: default
 
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts limit: 1 %}
       <li>
 
         <div class="post">
