@@ -5,37 +5,28 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">All my Posts</h1>
-  <p>Here you find all the post that I write</p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate asperiores unde, et vel reiciendis dolor, rem minus. Tempore corporis dolores enim animi facere at sapiente assumenda aspernatur ad maxime veritatis ut illum quam ea, fugit ducimus! Ullam quibusdam consectetur placeat distinctio, beatae sed, inventore eius earum minus natus, provident veniam, animi? Delectus ratione quia ullam eum facilis distinctio dolores praesentium magnam, molestiae necessitatibus. Excepturi eum reprehenderit unde alias quidem animi eveniet illo est magni hic. Dolore, accusamus, perferendis. Id vel sequi ex nam dolores quidem deleniti inventore. Accusamus eos architecto voluptatum nobis consequuntur delectus rerum ullam incidunt. Numquam, aut, voluptate.
-  </p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nihil necessitatibus error mollitia velit autem amet alias rerum aperiam est facere laboriosam quasi adipisci dolore sunt, perferendis, voluptates sapiente quis temporibus suscipit ipsam iure modi nisi incidunt repellat? Eum nam eius inventore itaque magnam excepturi maiores. Ullam nemo eveniet mollitia voluptatum? Sequi dignissimos earum voluptas. Quae voluptate commodi vitae ipsa laudantium sint. Distinctio facilis, nesciunt minus a obcaecati recusandae accusamus ullam dolore beatae, quaerat amet voluptatem hic repellat excepturi ad dolores ex. Magni natus harum quod sapiente, error iure dolore laboriosam corporis praesentium ipsa ut odio repudiandae eligendi mollitia, consectetur tempore sunt delectus magnam, rem minus. Impedit nostrum iste quos delectus iusto, saepe, porro! Facere sapiente expedita obcaecati qui praesentium cumque iusto vero natus doloribus debitis quis perspiciatis rerum reprehenderit corporis mollitia, aspernatur minima et ratione laboriosam autem voluptas commodi. Excepturi laboriosam natus perferendis itaque architecto. Quam excepturi laudantium temporibus laboriosam, minima eius, debitis obcaecati quos aliquam totam corporis iure commodi nesciunt. In, fugiat soluta quas rem nulla atque quasi aliquam, libero vitae iure ut, laborum temporibus. Corrupti corporis unde voluptas, autem nihil praesentium eligendi dolorem dolor reiciendis consectetur nemo, illo enim! Sed, natus! Harum maiores nulla, molestiae! Exercitationem quo dicta porro nobis ab ratione laborum, nostrum, quae quod dolores qui tenetur, cupiditate, et? Harum aliquam magnam adipisci, facere enim tempora dolorem soluta. Temporibus voluptas rem atque ad repellendus tempora iusto magni, eaque quod quaerat blanditiis sequi similique possimus veritatis sit amet dolores minus vel ullam praesentium, harum quo deserunt! Consequatur ullam consequuntur officiis dolor dignissimos ipsam esse magni. Qui impedit debitis voluptatem perferendis minus odit alias vel, amet iure, tenetur reprehenderit nemo illum dicta minima velit dolorem reiciendis. Veritatis ducimus odit in debitis mollitia recusandae harum minima eligendi unde nobis, nihil ullam iusto similique beatae dignissimos quisquam, laboriosam iure alias voluptates veniam at, et sit magni dolores? Ipsam laboriosam at quas nobis mollitia esse. Aliquam voluptates dolorem, dolorum, consectetur tempore delectus blanditiis a quo tenetur quibusdam fuga repellendus porro dolores voluptatum illum esse iusto sint temporibus possimus veniam placeat eaque quaerat magni, in itaque! Aliquid impedit tempora beatae illum laudantium! Ratione sed necessitatibus quia magnam nihil nesciunt illo iusto voluptatem optio a earum ipsum molestias natus itaque consequuntur modi deserunt amet, porro, saepe vero iure repellat aliquid molestiae quibusdam rem! Sunt ad cum numquam quo doloribus modi unde, est quasi, minus delectus cupiditate, eaque alias nesciunt, eius a laborum dolorem magnam quas error tenetur. Quo sed neque explicabo dolor amet! Repellat cum modi corporis alias mollitia nobis, dolor molestias cumque doloremque vitae sit, iste iure, perspiciatis iusto dolore fugit dicta vel repudiandae nulla, ratione voluptates tenetur esse tempora. Consequuntur praesentium accusantium ullam quasi provident velit nostrum id officiis iure aut ea asperiores vero non placeat neque, laborum perspiciatis repudiandae! Laborum distinctio repellat tenetur, magnam quibusdam eligendi at maxime laboriosam labore eum reprehenderit inventore iusto quas necessitatibus perspiciatis beatae sit exercitationem nam, amet quos aspernatur ipsum voluptate impedit, doloribus numquam. Error molestiae nisi in rerum excepturi deleniti blanditiis repudiandae, quis.
-  </p>
 
+  <div class="posts">
 
-
-  <ul class="post-list">
     {% for post in site.posts limit: 1 %}
-      <li>
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">{{ post.title }}</h1>
+          <p class="post-meta">
+            {{ post.date | date: "%b %-d, %Y" }}
+            {% if post.author %} • {{ post.author }}{% endif %}
+            {% if post.meta %} • {{ post.meta }}{% endif %}
+          </p>
+        </header>
 
-        <div class="post">
-
-          <header class="post-header">
-            <h1 class="post-title">{{ post.title }}</h1>
-            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
-          </header>
-
-          <article class="post-content">
-            {{ post.content }}
-          </article>
-
+        <div class="post-content">
+          {{ post.content }}
         </div>
-
-      </li>
+      </article>
     {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </div>
+
+  <div class="infinite-spinner"></div>
 
 </div>
