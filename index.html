@@ -8,7 +8,7 @@ layout: default
 
   <div class="posts">
 
-    {% for post in site.posts limit: 1 %}
+    {% for post in site.posts limit: 4 %}
       <article class="post">
         <header class="post-header">
           <h1 class="post-title">{{ post.title }}</h1>
@@ -27,6 +27,39 @@ layout: default
 
   </div>
 
-  <div class="infinite-spinner"></div>
+<style>
+.infinite-spinner {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #333;
+  margin: 60px auto;
+
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleout {
+  0% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+</style>
+
+  <div class="infinite-spinner">aap</div>
 
 </div>

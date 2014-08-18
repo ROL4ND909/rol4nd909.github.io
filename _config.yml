@@ -18,11 +18,12 @@ exclude: [
   package.json,
   Gruntfile.js,
   node_modules,
+  bower_components,
   tasks,
   readme.md
 ]
 
-permalink: /blog/:title/
+# permalink: /blog/:title
 
 twitter_username: rolandfranke
 github_username:  rol4nd909
